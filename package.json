@@ -1,0 +1,21 @@
+{
+  "name": "cluster-demo",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "old": "ts-node-dev old.ts",
+    "new": "ts-node-dev new.ts",
+    "test-old": "loadtest -n 1000 -c 100 http://localhost:4040",
+    "test-new": "loadtest -n 1000 -c 100 http://localhost:4041"
+  },
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "@types/node": "^16.4.7",
+    "loadtest": "^5.1.2",
+    "ts-node-dev": "^1.1.8",
+    "typescript": "^4.3.5"
+  }
+}
